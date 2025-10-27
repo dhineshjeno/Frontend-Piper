@@ -19,19 +19,19 @@ export const StatusIndicator: React.FC<StatusIndicatorProps> = ({
 
   const statusConfig = {
     online: {
-      color: 'bg-emerald-500',
+      color: 'status-online',
       label: 'Online',
-      ring: 'ring-emerald-500/20',
+      ring: 'ring-primary-500/20',
     },
     coding: {
-      color: 'bg-indigo-500',
+      color: 'status-coding',
       label: 'Coding',
-      ring: 'ring-indigo-500/20',
+      ring: 'ring-primary-500/20',
     },
     idle: {
-      color: 'bg-slate-400',
+      color: 'status-idle',
       label: 'Idle',
-      ring: 'ring-slate-400/20',
+      ring: 'ring-amber-500/20',
     },
   };
 
@@ -41,7 +41,7 @@ export const StatusIndicator: React.FC<StatusIndicatorProps> = ({
     <div className="flex items-center gap-2">
       <div className="relative">
         <div
-          className={`${sizeClasses[size]} ${config.color} rounded-full ring-4 ${config.ring} animate-pulse`}
+          className={`${sizeClasses[size]} ${config.color} rounded-full ring-4 ${config.ring}`}
         />
       </div>
       {showLabel && (

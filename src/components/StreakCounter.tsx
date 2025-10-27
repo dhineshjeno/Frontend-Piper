@@ -36,15 +36,15 @@ export const StreakCounter: React.FC<StreakCounterProps> = ({
   const config = sizeConfig[size];
 
   return (
-    <div className={`bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-xl ${config.container} border border-orange-500/20`}>
+    <div className={`card bg-gradient-to-br from-amber-500/10 to-orange-500/10 border-amber-500/20`}>
       <div className="flex items-start gap-4">
         <div className="relative">
-          <Flame className={`${config.icon} text-orange-500 animate-pulse`} />
-          <div className="absolute inset-0 blur-lg bg-orange-500/30 rounded-full" />
+          <Flame className={`${config.icon} text-amber-500 animate-pulse`} />
+          <div className="absolute inset-0 blur-lg bg-amber-500/30 rounded-full" />
         </div>
         <div className="flex-1">
           <div className="flex items-baseline gap-2">
-            <span className={`${config.text} font-bold text-orange-400`}>
+            <span className={`${config.text} font-bold text-amber-400`}>
               {currentStreak}
             </span>
             <span className={`${config.label} text-slate-400`}>day streak</span>
@@ -56,7 +56,7 @@ export const StreakCounter: React.FC<StreakCounterProps> = ({
       </div>
 
       {currentStreak > 0 && (
-        <div className="mt-3 pt-3 border-t border-orange-500/10">
+        <div className="mt-3 pt-3 border-t border-amber-500/10">
           <div className={`${config.label} text-slate-400`}>
             {currentStreak < 7 && "Keep going! You're building momentum!"}
             {currentStreak >= 7 && currentStreak < 14 && "Amazing! One week down!"}
